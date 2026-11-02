@@ -3,6 +3,21 @@
    fica no .css ao lado dele.
    ============================================================ */
 
+/* Pixel Operator, de Jayvee Enaguas (CC0) */
+@font-face {
+  font-family: "Pixel Operator";
+  src: url("./assets/fonts/PixelOperator.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Pixel Operator";
+  src: url("./assets/fonts/PixelOperator-Bold.ttf") format("truetype");
+  font-weight: 600 700;
+  font-display: swap;
+}
+
 :root {
   /* light-dark(claro, escuro) segue o color-scheme: sistema por padrão, ou o tema escolhido */
   color-scheme: light dark;
@@ -30,7 +45,7 @@
 
   /* Tipografia */
   --font-body: "Crimson Pro", Georgia, "Times New Roman", serif;
-  --font-display: "Pixelify Sans", "Courier New", monospace;
+  --font-display: "Pixel Operator", "Courier New", monospace;
   --text-xs: 0.95rem;
   --text-sm: 1.05rem;
   --text-base: 1.2rem;
