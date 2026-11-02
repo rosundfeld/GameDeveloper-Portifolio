@@ -1,0 +1,40 @@
+:host {
+  display: block;
+  position: relative;
+  background: var(--blood-deep);
+  border-bottom: var(--border-thick);
+}
+
+img {
+  width: 100%;
+  height: auto;
+  min-height: 320px;
+  object-fit: cover;
+  object-position: 50% 40%;
+}
+
+.hero-text {
+  position: absolute;
+  inset: auto 0 0 0;
+  padding: var(--space-xl) var(--space-lg) var(--space-lg);
+  background: linear-gradient(to top, var(--overlay), transparent);
+  color: var(--on-dark);
+}
+
+.wrap {
+  padding: 0;
+}
+
+h1 {
+  font-size: clamp(2.2rem, 6vw, 4.4rem);
+  margin: 0;
+  letter-spacing: 0.02em;
+  text-shadow: 4px 4px 0 var(--blood-deep);
+}
+
+p {
+  margin: var(--space-xs) 0 0;
+  font-size: clamp(1.05rem, 2.2vw, 1.35rem);
+  max-width: 42ch;
+  color: var(--on-dark-muted);
+}

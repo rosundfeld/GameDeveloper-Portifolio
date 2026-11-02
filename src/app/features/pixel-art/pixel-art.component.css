@@ -1,0 +1,15 @@
+.sprites {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-xl);
+}
+
+.sprites-placeholder {
+  min-height: 480px;
+}
+
+@media (max-width: 820px) {
+  .sprites {
+    grid-template-columns: 1fr;
+  }
+}

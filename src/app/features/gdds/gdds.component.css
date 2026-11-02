@@ -1,0 +1,32 @@
+.docs {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-top: var(--border);
+}
+
+li {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: var(--space-md);
+  align-items: center;
+  padding: var(--space-md) 0;
+  border-bottom: var(--border);
+}
+
+h3 {
+  margin: 0;
+  font-size: 1.3rem;
+}
+
+p {
+  margin: var(--space-2xs) 0 0;
+  color: var(--muted);
+  font-size: var(--text-sm);
+}
+
+@media (max-width: 600px) {
+  li {
+    grid-template-columns: 1fr;
+  }
+}

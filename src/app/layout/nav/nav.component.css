@@ -1,0 +1,38 @@
+:host {
+  display: block;
+  position: sticky;
+  top: env(safe-area-inset-top, 0px);
+  z-index: 20;
+  background: var(--bg);
+  border-bottom: var(--border);
+}
+
+.wrap {
+  display: flex;
+  gap: var(--space-lg);
+  align-items: center;
+  overflow-x: auto;
+  padding-block: var(--space-sm);
+}
+
+a {
+  font-family: var(--font-display);
+  font-size: var(--text-sm);
+  color: var(--ink);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+a:hover {
+  color: var(--blood);
+}
+
+.theme {
+  margin-left: auto;
+  padding: var(--space-2xs) var(--space-sm);
+  font-family: var(--font-display);
+  color: var(--ink);
+  background: none;
+  border: var(--border);
+  cursor: pointer;
+}

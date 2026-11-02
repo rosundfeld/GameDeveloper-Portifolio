@@ -1,0 +1,8 @@
+<div class="wrap">
+  <h2>Vamos fazer um jogo</h2>
+  <p>Aberto a vagas, freelas e game jams. Respondo por e-mail.</p>
+  <a class="btn" [href]="mailto">{{ profile.email }}</a>
+  @for (link of profile.links; track link.label) {
+    <a class="btn ghost" [href]="link.url">{{ link.label }}</a>
+  }
+</div>

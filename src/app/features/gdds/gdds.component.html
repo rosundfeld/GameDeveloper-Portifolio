@@ -1,0 +1,13 @@
+<section appSection id="gdds" heading="Game design documents" lede="Os documentos que guiam os projetos.">
+  <ul class="docs">
+    @for (gdd of gdds; track gdd.title) {
+      <li>
+        <div>
+          <h3>{{ gdd.title }}</h3>
+          <p>{{ gdd.summary }}</p>
+        </div>
+        <a class="btn ghost" [href]="gdd.url" [attr.aria-label]="'Abrir o GDD: ' + gdd.title">Abrir GDD</a>
+      </li>
+    }
+  </ul>
+</section>

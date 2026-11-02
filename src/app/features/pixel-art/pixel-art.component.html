@@ -1,0 +1,17 @@
+<section
+  appSection
+  id="arte"
+  heading="Pixel art"
+  lede="Aproxime os sprites para ver cada pixel. Ligue a grade para mostrar a malha original."
+>
+  <!-- O visualizador e o GIF só carregam quando a seção aparece na tela -->
+  @defer (on viewport) {
+    <div class="sprites">
+      @for (sprite of sprites; track sprite.name) {
+        <app-sprite-viewer [sprite]="sprite" />
+      }
+    </div>
+  } @placeholder {
+    <div class="sprites-placeholder"></div>
+  }
+</section>

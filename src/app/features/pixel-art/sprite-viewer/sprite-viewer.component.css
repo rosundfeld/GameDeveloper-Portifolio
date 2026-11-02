@@ -1,0 +1,82 @@
+figure {
+  margin: 0;
+  background: var(--surface);
+  border: var(--border);
+}
+
+.stage {
+  min-height: 340px;
+  display: grid;
+  place-items: center;
+  overflow: auto;
+  padding: var(--space-lg);
+  background: var(--stage-bg) radial-gradient(circle at 50% 35%, var(--stage-glow) 0, var(--stage-edge) 70%);
+}
+
+.zoomable {
+  position: relative;
+  width: calc(var(--w) * var(--z, 8) * 1px);
+  height: calc(var(--h) * var(--z, 8) * 1px);
+}
+
+.zoomable img {
+  width: 100%;
+  height: 100%;
+  max-width: none;
+}
+
+.grid {
+  display: none;
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(to right, rgb(255 255 255 / 0.18) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(255 255 255 / 0.18) 1px, transparent 1px);
+  background-size: calc(100% / var(--w)) calc(100% / var(--h));
+}
+
+.show-grid .grid {
+  display: block;
+}
+
+.animated {
+  width: min(100%, 460px);
+}
+
+figcaption {
+  padding: var(--space-md) var(--space-lg);
+  border-top: var(--border);
+}
+
+h3 {
+  margin: 0;
+  font-size: 1.35rem;
+}
+
+p {
+  margin: var(--space-2xs) 0 var(--space-sm);
+  color: var(--muted);
+  font-size: var(--text-sm);
+}
+
+.zoom {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+}
+
+.zoom button {
+  padding: var(--space-2xs) var(--space-sm);
+  font-family: var(--font-display);
+  font-size: var(--text-xs);
+  color: var(--ink);
+  background: transparent;
+  border: var(--border);
+  cursor: pointer;
+}
+
+.zoom button[aria-pressed="true"] {
+  background: var(--ink);
+  color: var(--bg);
+}

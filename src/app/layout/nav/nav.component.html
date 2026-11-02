@@ -1,0 +1,8 @@
+<div class="wrap">
+  @for (link of links; track link.url) {
+    <a [href]="link.url">{{ link.label }}</a>
+  }
+  <button class="theme" type="button" aria-label="Alternar tema claro ou escuro" (click)="theme.toggle()">
+    Tema
+  </button>
+</div>

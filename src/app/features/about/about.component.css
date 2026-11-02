@@ -1,0 +1,39 @@
+.roles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border: var(--border);
+}
+
+li {
+  padding: var(--space-lg);
+  border-right: var(--border);
+}
+
+li:last-child {
+  border-right: none;
+}
+
+h3 {
+  margin: 0 0 var(--space-2xs);
+  font-size: 1.25rem;
+}
+
+p {
+  margin: 0;
+  color: var(--muted);
+  font-size: var(--text-sm);
+}
+
+@media (max-width: 720px) {
+  li {
+    border-right: none;
+    border-bottom: var(--border);
+  }
+
+  li:last-child {
+    border-bottom: none;
+  }
+}

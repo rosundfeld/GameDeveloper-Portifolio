@@ -1,0 +1,29 @@
+:host {
+  display: block;
+  margin-top: var(--space-3xl);
+  padding: var(--space-2xl) 0;
+  background: var(--blood-deep);
+  color: var(--on-dark);
+  border-top: var(--border-thick);
+}
+
+h2 {
+  color: var(--on-dark);
+}
+
+p {
+  max-width: 50ch;
+  color: var(--on-dark-muted);
+}
+
+.btn {
+  background: var(--on-dark);
+  color: var(--on-light);
+}
+
+.btn.ghost {
+  background: transparent;
+  color: var(--on-dark);
+  border-color: var(--on-dark);
+  box-shadow: 4px 4px 0 var(--shadow-deep);
+}

@@ -1,0 +1,25 @@
+@let s = sprite();
+<figure>
+  <div class="stage" [class.show-grid]="showGrid()">
+    @if (s.pixelSize; as size) {
+      <div class="zoomable" [style.--w]="size.width" [style.--h]="size.height" [style.--z]="zoom()">
+        <img [src]="s.src" [alt]="s.alt" />
+        <div class="grid" aria-hidden="true"></div>
+      </div>
+    } @else {
+      <img class="animated" [src]="s.src" [alt]="s.alt" />
+    }
+  </div>
+  <figcaption>
+    <h3>{{ s.name }}</h3>
+    <p>{{ s.description }}</p>
+    @if (s.pixelSize) {
+      <div class="zoom" role="group" aria-label="Zoom do sprite">
+        @for (level of zoomLevels; track level) {
+          <button type="button" [attr.aria-pressed]="zoom() === level" (click)="zoom.set(level)">{{ level }}×</button>
+        }
+        <button type="button" [attr.aria-pressed]="showGrid()" (click)="toggleGrid()">Grade</button>
+      </div>
+    }
+  </figcaption>
+</figure>

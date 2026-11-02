@@ -1,0 +1,15 @@
+<section
+  appSection
+  id="sobre"
+  heading="Do primeiro pixel ao build final"
+  lede="Faço jogos utilizando Unity e Aseprite de ponta a ponta. Cada projeto aqui passou pelas três frentes: arte, código e design."
+>
+  <ul class="roles">
+    @for (role of roles; track role.title) {
+      <li>
+        <h3>{{ role.title }}</h3>
+        <p>{{ role.description }}</p>
+      </li>
+    }
+  </ul>
+</section>

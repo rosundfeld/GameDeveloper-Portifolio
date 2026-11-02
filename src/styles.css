@@ -1,0 +1,168 @@
+/* ============================================================
+   Tokens globais e estilos base. O estilo de cada componente
+   fica no .css ao lado dele.
+   ============================================================ */
+
+:root {
+  /* light-dark(claro, escuro) segue o color-scheme: sistema por padrão, ou o tema escolhido */
+  color-scheme: light dark;
+
+  /* Cores do tema */
+  --bg: light-dark(#e4dfda, #16141a);
+  --surface: light-dark(#d6cfc9, #221e25);
+  --ink: light-dark(#241a1c, #e3d9cf);
+  --muted: light-dark(#5d4f50, #a3958c);
+  --blood: light-dark(#8e2525, #c0423c);
+  --gold: light-dark(#a8701c, #e0a83a);
+  --line: light-dark(#241a1c, #3a3340);
+  --blood-deep: #5b1f1f;
+
+  /* Cores fixas (superfícies que são escuras ou claras nos dois temas) */
+  --on-dark: #e3d9cf;
+  --on-dark-muted: #d8cfc4;
+  --on-light: #241a1c;
+  --on-blood: #f3ece6;
+  --shadow-deep: #120d0f;
+  --overlay: rgb(14 10 12 / 0.92);
+  --stage-bg: #2a2228;
+  --stage-glow: #4a2428;
+  --stage-edge: #1c171c;
+
+  /* Tipografia */
+  --font-body: "Crimson Pro", Georgia, "Times New Roman", serif;
+  --font-display: "Pixelify Sans", "Courier New", monospace;
+  --text-xs: 0.95rem;
+  --text-sm: 1.05rem;
+  --text-base: 1.2rem;
+
+  /* Espaçamento */
+  --space-2xs: 0.2rem;
+  --space-xs: 0.4rem;
+  --space-sm: 0.7rem;
+  --space-md: 1rem;
+  --space-lg: 1.25rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4.5rem;
+
+  /* Bordas e sombras */
+  --border: 2px solid var(--line);
+  --border-thick: 4px solid var(--line);
+  --shadow-sm: 4px 4px 0 var(--line);
+  --shadow-lg: 8px 8px 0 var(--blood-deep);
+
+  --wrap-width: 1100px;
+
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+:root[data-theme="light"] {
+  color-scheme: light;
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+}
+
+/* Base */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-padding-top: env(safe-area-inset-top, 0px);
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  line-height: 1.6;
+  color: var(--ink);
+  background: var(--bg);
+}
+
+/* Cobre a área do notch acima do menu fixo */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 21;
+  height: env(safe-area-inset-top, 0px);
+  background: var(--bg);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  line-height: 1.15;
+}
+
+h2 {
+  margin: 0 0 var(--space-xs);
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  color: var(--blood);
+}
+
+a {
+  color: var(--blood);
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 3px;
+}
+
+/* Utilitários compartilhados */
+.wrap {
+  max-width: var(--wrap-width);
+  margin: 0 auto;
+  padding: 0 var(--space-lg);
+}
+
+.btn {
+  display: inline-block;
+  margin: 0.3rem 0.5rem 0.3rem 0;
+  padding: 0.55rem 1.1rem;
+  font-family: var(--font-display);
+  font-size: var(--text-sm);
+  text-decoration: none;
+  color: var(--on-blood);
+  background: var(--blood);
+  border: var(--border);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0 var(--line);
+}
+
+.btn.ghost {
+  background: transparent;
+  color: var(--ink);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .btn:hover {
+    transform: none;
+  }
+}
