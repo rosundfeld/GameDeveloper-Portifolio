@@ -108,6 +108,13 @@ export const PROJECTS: Project[] = [
       pt: 'Não é um apocalipse zumbi. É terça-feira na hora do almoço. Jogo cooperativo para 1 a 4 jogadores: administre um carrinho de comida e alimente uma multidão faminta antes que ela destrua o seu negócio. Overcooked encontra tower defense.',
       en: "It's not a zombie apocalypse. It's Tuesday at lunchtime. A co-op game for 1 to 4 players: run a food cart and feed a starving crowd before it wrecks your business. Overcooked meets tower defense.",
     },
+    image: {
+      src: 'images/murder-king.png',
+      alt: {
+        pt: 'Vista de cima da cozinha do Murder King: balcões com ingredientes, fogões e clientes famintos com pedidos de hambúrguer e salada na rua',
+        en: 'Top-down view of the Murder King kitchen: counters with ingredients, stoves and hungry customers on the street ordering burgers and salad',
+      },
+    },
     engine: 'Unity · C#',
     role: { pt: 'Código e game design', en: 'Code and game design' },
     status: { pt: 'Em desenvolvimento', en: 'In development' },
