@@ -1,8 +1,18 @@
 <div class="wrap">
   @for (link of links; track link.url) {
-    <a [href]="link.url">{{ link.label }}</a>
+    <a [href]="link.url">{{ link.label | t }}</a>
   }
-  <button class="theme" type="button" aria-label="Alternar tema claro ou escuro" (click)="theme.toggle()">
-    Tema
-  </button>
+  <div class="toggles">
+    <button type="button" [attr.aria-label]="ui.nav.themeLabel | t" (click)="theme.toggle()">
+      {{ ui.nav.theme | t }}
+    </button>
+    <button
+      type="button"
+      [attr.lang]="ui.nav.languageCode | t"
+      [attr.aria-label]="ui.nav.languageLabel | t"
+      (click)="language.toggle()"
+    >
+      {{ ui.nav.language | t }}
+    </button>
+  </div>
 </div>

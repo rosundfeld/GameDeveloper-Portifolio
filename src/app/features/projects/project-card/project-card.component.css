@@ -59,3 +59,14 @@ dd {
     grid-template-columns: 1fr;
   }
 }
+
+/* Cards alternados: nos pares a imagem vai para a direita. No celular fica tudo empilhado. */
+@media (min-width: 821px) {
+  :host(:nth-of-type(even)) .project:not(.no-image) {
+    grid-template-columns: 1fr 1.4fr;
+  }
+
+  :host(:nth-of-type(even)) .frame {
+    order: 1;
+  }
+}

@@ -1,9 +1,11 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 
-import { PROFILE } from '../../core/constants/portfolio.data';
+import { PROFILE, UI_TEXT } from '../../core/constants/portfolio.data';
+import { TranslatePipe } from '../../shared/pipes/translate.pipe';
 
 @Component({
   selector: 'footer[appFooter]',
+  imports: [TranslatePipe],
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -11,5 +13,6 @@ import { PROFILE } from '../../core/constants/portfolio.data';
 })
 export class FooterComponent {
   protected readonly profile = PROFILE;
+  protected readonly ui = UI_TEXT;
   protected readonly mailto = `mailto:${PROFILE.email}`;
 }

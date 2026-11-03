@@ -27,8 +27,13 @@ a:hover {
   color: var(--blood);
 }
 
-.theme {
+.toggles {
+  display: flex;
+  gap: var(--space-xs);
   margin-left: auto;
+}
+
+.toggles button {
   padding: var(--space-2xs) var(--space-sm);
   font-family: var(--font-display);
   color: var(--ink);

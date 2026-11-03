@@ -14,7 +14,9 @@ Quase tudo se edita em um só arquivo: `src/app/core/constants/portfolio.data.ts
 - Novo jogo: copie um item de `PROJECTS`
 - Nova arte: coloque a imagem em `public/images/` e adicione um item em `SPRITES`
   (informe `pixelSize: { width, height }` em pixels para ativar zoom e grade)
-- Novo GDD: coloque o PDF em `public/` e adicione um item em `GDDS`
+- Novo GDD: coloque o PDF em `public/gdds/` e adicione um item em `GDDS`
+- Textos em dois idiomas usam `{ pt: '...', en: '...' }`; uma string simples vale para os dois.
+  Títulos de seção e botões ficam em `UI_TEXT`, no fim do mesmo arquivo.
 
 Cores, fontes e espaçamentos ficam em `src/styles.css`; o estilo de cada parte fica no `.css` ao lado do componente.
 

@@ -1,9 +1,4 @@
-<section
-  appSection
-  id="arte"
-  heading="Pixel art"
-  lede="Aproxime os sprites para ver cada pixel. Ligue a grade para mostrar a malha original."
->
+<section appSection id="arte" [heading]="ui.pixelArt.heading | t" [lede]="ui.pixelArt.lede | t">
   <!-- O visualizador e o GIF só carregam quando a seção aparece na tela -->
   @defer (on viewport) {
     <div class="sprites">

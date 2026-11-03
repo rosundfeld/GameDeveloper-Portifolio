@@ -1,14 +1,9 @@
-<section
-  appSection
-  id="sobre"
-  heading="Do primeiro pixel ao jogo completo"
-  lede="Faço jogos utilizando Unity e Aseprite de ponta a ponta. Cada projeto aqui passou pelas três frentes: arte, código e design."
->
+<section appSection id="sobre" [heading]="ui.about.heading | t" [lede]="ui.about.lede | t">
   <ul class="roles">
-    @for (role of roles; track role.title) {
+    @for (role of roles; track $index) {
       <li>
-        <h3>{{ role.title }}</h3>
-        <p>{{ role.description }}</p>
+        <h3>{{ role.title | t }}</h3>
+        <p>{{ role.description | t }}</p>
       </li>
     }
   </ul>

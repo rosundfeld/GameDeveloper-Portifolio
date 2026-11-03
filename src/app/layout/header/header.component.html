@@ -1,7 +1,7 @@
-<img [src]="image.src" [alt]="image.alt" fetchpriority="high" />
+<img [src]="image.src" [alt]="image.alt | t" fetchpriority="high" />
 <div class="hero-text">
   <div class="wrap">
     <h1>{{ profile.name }}</h1>
-    <p>{{ profile.tagline }}</p>
+    <p>{{ profile.tagline | t }}</p>
   </div>
 </div>

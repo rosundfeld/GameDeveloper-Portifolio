@@ -2,28 +2,34 @@
 <article class="project" [class.no-image]="!p.image">
   @if (p.image; as image) {
     <div class="frame">
-      <img [src]="image.src" [alt]="image.alt" loading="lazy" />
+      <img [src]="image.src" [alt]="image.alt | t" loading="lazy" />
     </div>
   }
   <div>
     <h3>{{ p.title }}</h3>
-    <p>{{ p.description }}</p>
+    <p>{{ p.description | t }}</p>
     <dl class="facts">
-      @for (fact of facts(); track fact.label) {
+      @for (fact of facts(); track $index) {
         <div>
-          <dt>{{ fact.label }}</dt>
-          <dd>{{ fact.value }}</dd>
+          <dt>{{ fact.label | t }}</dt>
+          <dd>{{ fact.value | t }}</dd>
         </div>
       }
     </dl>
     @if (p.playUrl) {
-      <a class="btn" [href]="p.playUrl" [attr.aria-label]="'Jogar no itch.io: ' + p.title">Jogar no itch.io</a>
+      <a class="btn" [href]="p.playUrl" [attr.aria-label]="(ui.actions.play | t) + ': ' + p.title">
+        {{ ui.actions.play | t }}
+      </a>
     }
     @if (p.gddUrl) {
-      <a class="btn ghost" [href]="p.gddUrl" [attr.aria-label]="'Ver o GDD: ' + p.title">Ver o GDD</a>
+      <a class="btn ghost" [href]="p.gddUrl" [attr.aria-label]="(ui.actions.gdd | t) + ': ' + p.title">
+        {{ ui.actions.gdd | t }}
+      </a>
     }
     @if (p.repoUrl) {
-      <a class="btn ghost" [href]="p.repoUrl" [attr.aria-label]="'Ver no GitHub: ' + p.title">Ver no GitHub</a>
+      <a class="btn ghost" [href]="p.repoUrl" [attr.aria-label]="(ui.actions.repo | t) + ': ' + p.title">
+        {{ ui.actions.repo | t }}
+      </a>
     }
   </div>
 </article>

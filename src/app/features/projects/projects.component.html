@@ -1,4 +1,4 @@
-<section appSection id="jogos" heading="Jogos" lede="Projetos em que fiz arte, código e design.">
+<section appSection id="jogos" [heading]="ui.projects.heading | t" [lede]="ui.projects.lede | t">
   @for (project of projects; track project.title) {
     <app-project-card [project]="project" />
   }

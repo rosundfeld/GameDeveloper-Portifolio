@@ -3,22 +3,22 @@
   <div class="stage" [class.show-grid]="showGrid()">
     @if (s.pixelSize; as size) {
       <div class="zoomable" [style.--w]="size.width" [style.--h]="size.height" [style.--z]="zoom()">
-        <img [src]="s.src" [alt]="s.alt" />
+        <img [src]="s.src" [alt]="s.alt | t" />
         <div class="grid" aria-hidden="true"></div>
       </div>
     } @else {
-      <img class="animated" [src]="s.src" [alt]="s.alt" />
+      <img class="animated" [src]="s.src" [alt]="s.alt | t" />
     }
   </div>
   <figcaption>
     <h3>{{ s.name }}</h3>
-    <p>{{ s.description }}</p>
+    <p>{{ s.description | t }}</p>
     @if (s.pixelSize) {
-      <div class="zoom" role="group" aria-label="Zoom do sprite">
+      <div class="zoom" role="group" [attr.aria-label]="ui.pixelArt.zoom | t">
         @for (level of zoomLevels; track level) {
           <button type="button" [attr.aria-pressed]="zoom() === level" (click)="zoom.set(level)">{{ level }}×</button>
         }
-        <button type="button" [attr.aria-pressed]="showGrid()" (click)="toggleGrid()">Grade</button>
+        <button type="button" [attr.aria-pressed]="showGrid()" (click)="toggleGrid()">{{ ui.pixelArt.grid | t }}</button>
       </div>
     }
   </figcaption>
