@@ -28,8 +28,8 @@ export interface Role {
 export interface Project {
   title: string;
   description: Text;
-  /** Sem imagem, o card ocupa a largura toda só com o texto. */
-  image?: ImageAsset;
+  /** Mais de uma imagem vira carrossel. Sem imagem, o card ocupa a largura toda só com o texto. */
+  images?: ImageAsset[];
   engine: string;
   role: Text;
   status: Text;

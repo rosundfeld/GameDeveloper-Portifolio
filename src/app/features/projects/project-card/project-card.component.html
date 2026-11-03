@@ -1,8 +1,13 @@
 @let p = project();
-<article class="project" [class.no-image]="!p.image">
-  @if (p.image; as image) {
+@let images = p.images ?? [];
+<article class="project" [class.no-image]="!images.length">
+  @if (images.length) {
     <div class="frame">
-      <img [src]="image.src" [alt]="image.alt | t" loading="lazy" />
+      @if (images.length > 1) {
+        <app-image-carousel [images]="images" [label]="p.title" />
+      } @else {
+        <img [src]="images[0].src" [alt]="images[0].alt | t" loading="lazy" />
+      }
     </div>
   }
   <div>

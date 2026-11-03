@@ -15,16 +15,23 @@
   max-width: 60ch;
 }
 
+/* Proporção fixa: o card tem o mesmo tamanho qualquer que seja a imagem; o fundo preto preenche as sobras */
 .frame {
+  aspect-ratio: 16 / 10;
   background: #000;
   border: var(--border-thick);
   box-shadow: var(--shadow-lg);
 }
 
-/* Screenshots em retrato (mobile) não devem esticar o card */
-.frame img {
-  max-height: 440px;
-  margin-inline: auto;
+.frame > img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.frame app-image-carousel {
+  display: block;
+  height: 100%;
 }
 
 h3 {

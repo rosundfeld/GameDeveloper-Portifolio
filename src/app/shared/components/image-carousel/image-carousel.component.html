@@ -1,0 +1,7 @@
+@let image = current();
+<div class="carousel" role="group" [attr.aria-roledescription]="ui.carousel.name | t" [attr.aria-label]="label()">
+  <img [src]="image.src" [alt]="image.alt | t" loading="lazy" />
+  <button type="button" class="prev" [attr.aria-label]="ui.carousel.previous | t" (click)="show(-1)">&lt;</button>
+  <button type="button" class="next" [attr.aria-label]="ui.carousel.next | t" (click)="show(1)">&gt;</button>
+  <p class="counter" aria-live="polite">{{ index() + 1 }} / {{ images().length }}</p>
+</div>

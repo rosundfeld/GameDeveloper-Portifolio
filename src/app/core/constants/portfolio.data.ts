@@ -70,13 +70,29 @@ export const PROJECTS: Project[] = [
       pt: 'Exploração e aventura pelas ruas de São Paulo pelos olhos de quem vem do interior. Câmera billboard que dá efeito 3D a sprites 2D, sistema de diálogo e NPCs com NavMesh.',
       en: 'Exploration and adventure through the streets of São Paulo, seen through the eyes of someone from a small town. A billboard camera gives 2D sprites a 3D look, plus a dialogue system and NavMesh NPCs.',
     },
-    image: {
-      src: 'images/sampa-simulator.png',
-      alt: {
-        pt: 'Menu do Sampa Simulator sobre uma rua de São Paulo com prédios, cones, hidrante e um carro vermelho',
-        en: 'Sampa Simulator menu over a São Paulo street with buildings, traffic cones, a fire hydrant and a red car',
+    images: [
+      {
+        src: 'images/sampa-simulator.png',
+        alt: {
+          pt: 'Menu do Sampa Simulator sobre uma rua de São Paulo com prédios, cones, hidrante e um carro vermelho',
+          en: 'Sampa Simulator menu over a São Paulo street with buildings, traffic cones, a fire hydrant and a red car',
+        },
       },
-    },
+      {
+        src: 'images/sampa-simulator-2.png',
+        alt: {
+          pt: 'Diálogo com o Chicão numa praça grafitada: "Tem um troco aí?"',
+          en: 'Dialogue with Chicão in a graffiti-covered square: "Got any spare change?"',
+        },
+      },
+      {
+        src: 'images/sampa-simulator-3.png',
+        alt: {
+          pt: 'Protagonista ruivo e um bombeiro em pixel art na calçada em frente a um supermercado',
+          en: 'Red-haired protagonist and a firefighter in pixel art on the sidewalk in front of a supermarket',
+        },
+      },
+    ],
     engine: 'Unity · C#',
     role: { pt: 'Arte, código e design', en: 'Art, code and design' },
     status: { pt: 'Em desenvolvimento', en: 'In development' },
@@ -89,13 +105,29 @@ export const PROJECTS: Project[] = [
       pt: 'Um Flappy Bird com tema inspirado na foto de um amigo. Projeto para praticar mecânicas simples, pontuação, efeitos sonoros e UI/UX.',
       en: "A Flappy Bird themed after a friend's photo. A project to practice simple mechanics, scoring, sound effects and UI/UX.",
     },
-    image: {
-      src: 'images/chinese-flappy-bird.png',
-      alt: {
-        pt: 'Tela do Chinese Flappy Bird: personagem voando entre bambus diante da Muralha da China',
-        en: 'Chinese Flappy Bird screen: a character flying between bamboo in front of the Great Wall of China',
+    images: [
+      {
+        src: 'images/chinese-flappy-bird.png',
+        alt: {
+          pt: 'Tela inicial do Flappy Bailly Chinese Edition: personagem de chapéu de palha diante de um pagode, com o botão Start',
+          en: 'Flappy Bailly Chinese Edition title screen: a character in a straw hat in front of a pagoda, with a Start button',
+        },
       },
-    },
+      {
+        src: 'images/chinese-flappy-bird-2.png',
+        alt: {
+          pt: 'Personagem de chapéu de palha voando entre canos de bambu',
+          en: 'Straw-hat character flying between bamboo pipes',
+        },
+      },
+      {
+        src: 'images/chinese-flappy-bird-3.png',
+        alt: {
+          pt: 'Fim de jogo com 3 pontos e o botão Restart',
+          en: 'Game over with a score of 3 and a Restart button',
+        },
+      },
+    ],
     engine: 'Unity · C#',
     role: { pt: 'Código e UI/UX', en: 'Code and UI/UX' },
     status: { pt: 'Concluído', en: 'Finished' },
@@ -108,13 +140,15 @@ export const PROJECTS: Project[] = [
       pt: 'Não é um apocalipse zumbi. É terça-feira na hora do almoço. Jogo cooperativo para 1 a 4 jogadores: administre um carrinho de comida e alimente uma multidão faminta antes que ela destrua o seu negócio. Overcooked encontra tower defense.',
       en: "It's not a zombie apocalypse. It's Tuesday at lunchtime. A co-op game for 1 to 4 players: run a food cart and feed a starving crowd before it wrecks your business. Overcooked meets tower defense.",
     },
-    image: {
-      src: 'images/murder-king.png',
-      alt: {
-        pt: 'Vista de cima da cozinha do Murder King: balcões com ingredientes, fogões e clientes famintos com pedidos de hambúrguer e salada na rua',
-        en: 'Top-down view of the Murder King kitchen: counters with ingredients, stoves and hungry customers on the street ordering burgers and salad',
+    images: [
+      {
+        src: 'images/murder-king.png',
+        alt: {
+          pt: 'Vista de cima da cozinha do Murder King: balcões com ingredientes, fogões e clientes famintos com pedidos de hambúrguer e salada na rua',
+          en: 'Top-down view of the Murder King kitchen: counters with ingredients, stoves and hungry customers on the street ordering burgers and salad',
+        },
       },
-    },
+    ],
     engine: 'Unity · C#',
     role: { pt: 'Código e game design', en: 'Code and game design' },
     status: { pt: 'Em desenvolvimento', en: 'In development' },
@@ -127,13 +161,15 @@ export const PROJECTS: Project[] = [
       pt: 'Gerenciamento de base 2D com elementos de RTS, ambientado nas cruzadas. Você é um Capelão guiando os sobreviventes depois que os demônios traíram os pagãos: seu poder vem da fé da humanidade e enfraquece com o desespero.',
       en: "A 2D base-management game with RTS elements, set during the Crusades. You play a Chaplain guiding the survivors after the demons betrayed the pagans: your power comes from humanity's faith and weakens with despair.",
     },
-    image: {
-      src: 'images/memento-mori-igreja.png',
-      alt: {
-        pt: 'Concept do cenário da igreja em Memento Mori',
-        en: 'Concept art of the church setting in Memento Mori',
+    images: [
+      {
+        src: 'images/memento-mori-igreja.png',
+        alt: {
+          pt: 'Concept do cenário da igreja em Memento Mori',
+          en: 'Concept art of the church setting in Memento Mori',
+        },
       },
-    },
+    ],
     engine: 'Unity · C#',
     role: { pt: 'Arte, código e design', en: 'Art, code and design' },
     status: { pt: 'Em desenvolvimento', en: 'In development' },
@@ -280,6 +316,11 @@ export const UI_TEXT = {
       pt: 'Aberto a vagas, freelas e game jams. Respondo por e-mail.',
       en: 'Open to jobs, freelance work and game jams. I reply by email.',
     },
+  },
+  carousel: {
+    name: { pt: 'carrossel', en: 'carousel' },
+    previous: { pt: 'Imagem anterior', en: 'Previous image' },
+    next: { pt: 'Próxima imagem', en: 'Next image' },
   },
   actions: {
     play: { pt: 'Jogar no itch.io', en: 'Play on itch.io' },
